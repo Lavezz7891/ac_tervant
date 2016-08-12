@@ -1,0 +1,28 @@
+
+Tabel spelers: Spelers toevoegen, spelers verwijderen, spelers aanpassen, spelers weergeven
+speler naam
+speler achternaam
+speler leeftijd
+speler geboortedatum
+speler contact gegevens ( telefoon ouders, adres)
+speler geslacht
+speler evaluatie
+
+sql query om toe te voegen : INSERT INTO `tervant_u10`.`spelers` (`ID`, `voornaam`, `achternaam`, `leeftijd`, `geboortedatum`, `contact`, `geslacht`, `evaluatie`) VALUES ('1', 'Gianni', 'D''Amires', '9', '13 oktober 2006', '0471 281479', 'man', 'Hij zal veel moeten trainen dit jaar');
+
+
+
+
+Tabel speler statistieken: gegevens toegevoegen, aangepassen, verwijderen, weergeven
+doelpunten
+assists
+
+
+
+tabel ploeg doelpunten:  gegevens toegevoegen, aangepassen, verwijderen, weergeven
+doelpunten gemaakt
+doelpunten tegen
+
+DB is aangemaakt met de nodige informatie
+
+- Bekijken hoe ik de drie links moet gebruiken met ajax, geen nut op 3 verschillende pagina's te maken als ik opdezelfde pagina alleen de div moet vervangen met de menu knop
