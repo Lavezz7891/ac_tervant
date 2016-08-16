@@ -20,7 +20,7 @@ toon_header()
 		</div>
 	</div>
 	<div class="inner-body">
-		<p>Spelers u10A</p>
+		<p>Wedstrijd verslagen</p>
 		<div class="innerContainers">
 			<p>Innder containers</p>
 			<div class="innerContainer">
