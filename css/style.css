@@ -45,5 +45,23 @@ div.header ul li:hover  {
 }
 
 div.inner-body {
-	border: 5px solid blue;
+	border: 2px solid blue;
+}
+
+div.innerContainers {
+	border: 2px solid green;
+	--containerBreede : 250px;
+	overflow: hidden;
+	width: 960px;
+	margin: 0 auto;
+}
+
+div.innerContainer {
+	border: 2px solid grey;
+	width: var(--containerBreede);
+	height: 60px;
+	float: left;
+	margin-left: 50px;
+	text-align: center;
+	line-height: 50px;
 }
