@@ -1,4 +1,5 @@
 body {
+	
 	background-color: #F0f0f0;
 }
 
@@ -10,12 +11,15 @@ div.main {
 div.main h1 {
 	text-align: center;
 	width: auto;
-	/*margin: 30px auto;*/
+	margin: 0;
+	padding: 25px 0;
 }
 
 div.header {
 	width: auto; 
 	margin: 0 auto;
+	background-color: #BEE0FF;
+	height: 50px;
 }
 
 div.menu {
@@ -26,22 +30,36 @@ div.menu {
 div.header ul {
 	margin: 0 auto;
 	overflow: hidden;
-	width: 425px;
+	height: 50px;
 }
 
 div.header ul li {
 	float: left;
-	padding: 2px 5px;
-	text-transform: capitalize;
+	padding: 8px 10px;
 	list-style-type: none;
-	margin: 5px;
+	margin: 0 0px;
+	height: 50px;
+}
+
+div.header ul li:first {
+	margin-left: 25px;
+	background-color: green;
+}
+
+div.header ul li a {
 	display: block;
+	height: 50px;
 }
 
 div.header ul li:hover  {
-	background-color: #706A94;
-	color: #fff;
-	border-radius: 15%;
+	background-color: #A6C3DD;
+	border-radius: 5%;
+}
+
+div.header ul li:hover  a {	
+	color: #F0f0f0;
+	list-style-type: none;
+	text-decoration: none;
 }
 
 div.inner-body {
