@@ -1,4 +1,6 @@
 
+DATABASE TABELLEN {
+
 Tabel spelers: Spelers toevoegen, spelers verwijderen, spelers aanpassen, spelers weergeven
 speler naam
 speler achternaam
@@ -26,3 +28,11 @@ doelpunten tegen
 DB is aangemaakt met de nodige informatie
 
 - Bekijken hoe ik de drie links moet gebruiken met ajax, geen nut op 3 verschillende pagina's te maken als ik opdezelfde pagina alleen de div moet vervangen met de menu knop
+
+}
+
+Volgene stappen is het verder uitwerken in algemene lijnen hoe de styling eruit moet zien.
+weliswaar is het belangrijkste om gewoon de structuur in orde te maken, styling kan achteraf nog
+
+- op mijn website een nieuwe database aanmaken of koppelen aan een bestaanden en de bovenstaande tabellen aanmaken
+- Nakijken of het binnen mijn kunnen is om een admin ruimte aan te maken zodat ik ter plaatse dingen kan toevoegen... dit is de bedoeling... back end hoef ik achteraf niet meer te zijn...
