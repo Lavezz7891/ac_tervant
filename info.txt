@@ -35,4 +35,9 @@ Volgene stappen is het verder uitwerken in algemene lijnen hoe de styling eruit 
 weliswaar is het belangrijkste om gewoon de structuur in orde te maken, styling kan achteraf nog
 
 - op mijn website een nieuwe database aanmaken of koppelen aan een bestaanden en de bovenstaande tabellen aanmaken
+
 - Nakijken of het binnen mijn kunnen is om een admin ruimte aan te maken zodat ik ter plaatse dingen kan toevoegen... dit is de bedoeling... back end hoef ik achteraf niet meer te zijn...
+
+- wedstrijdverslagen kunnen schrijven
+		|---> automatisch in de juiste DIV komen (inner container) en moet allemaal met php gebeuren
+		|---> kunnen wijzigen en wissen
