@@ -5,7 +5,7 @@ include 'include.php';
 <?php toon_header()  ?>
 
 <body>
-<div class="main">
+<section class="main">
 	<h1>A.C. Tervant U10A</h1>
 	<div class="header">
 		<div class="menu">
@@ -18,7 +18,7 @@ include 'include.php';
 		</div>
 
 		<div class="login center">
-				<ul><li><a href="login.php">Login</a></li></um>
+				<ul><li><a href="login.php">Login</a></li></ul>
 		</div>
 	</div>
 	<div class="inner-body">
@@ -40,8 +40,7 @@ include 'include.php';
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
+<?php toon_footer() ?>
  
-</body>
-</html>

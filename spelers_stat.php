@@ -7,7 +7,7 @@ toon_header()
 ?>
 
 <body>
-<div class="main">
+<section class="main">
 	<h1>A.C. Tervant U10A</h1>
 	<div class="header">
 		<div class="menu">
@@ -35,8 +35,7 @@ toon_header()
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
  
-</body>
-</html>
+<?php toon_footer() ?>

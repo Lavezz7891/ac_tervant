@@ -22,5 +22,15 @@ function toon_header() {
 <?php
 }
 
+function toon_footer() {
+	?>
+
+	<div class="footer">
+		<div class="inner-footer"><p>FOOTER</p></div>
+	</div>
+		</body>
+	</html>
+<?php
+}
 
  ?>
