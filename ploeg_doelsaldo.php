@@ -22,7 +22,6 @@ toon_header()
 	<div class="inner-body">
 		<p>ploeg doelsaldo</p>
 		<div class="innerContainers">
-			<p>Innder containers</p>
 			<div class="innerContainer">
 				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
 			</div>

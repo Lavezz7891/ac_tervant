@@ -22,7 +22,6 @@ toon_header()
 	<div class="inner-body">
 		<p>Spelers u10A</p>
 		<div class="innerContainers">
-			<p>Innder containers</p>
 			<div class="innerContainer">
 				<p>Tervant - herkenrode</p>
 			</div>

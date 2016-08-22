@@ -22,9 +22,8 @@ toon_header()
 	<div class="inner-body">
 		<p>Spelers statistieken</p>
 		<div class="innerContainers">
-			<p>Innder containers</p>
 			<div class="innerContainer">
-				<p>Tervant - herkenrode</p>
+				<p>Tervant - herkenrode oiehfoiz oej efijie okjc oeij iijodjoiedjfoiejf oij eii fàij eoij  </p>
 			</div>
 
 			<div class="innerContainer">
@@ -32,7 +31,7 @@ toon_header()
 			</div>
 
 			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
+				<p>Tervant - herkenrode	ozhef oijf iedjf ekjf eij ijfeijfei jfo zjf eiof oijf </p>
 			</div>
 		</div>
 	</div>

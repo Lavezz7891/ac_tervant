@@ -10,11 +10,15 @@ include 'include.php';
 	<div class="header">
 		<div class="menu">
 			<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="spelers_tervant.php">Spelers</a></li>
-			<li><a href="spelers_stat.php">Spelers statistieken</a></li>
-			<li><a href="ploeg_doelsaldo.php">Ploeg doelpunten</a></li>
-		</ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="spelers_tervant.php">Spelers</a></li>
+				<li><a href="spelers_stat.php">Spelers statistieken</a></li>
+				<li><a href="ploeg_doelsaldo.php">Ploeg doelpunten</a></li>
+			</ul>
+		</div>
+
+		<div class="login center">
+				<ul><li><a href="login.php">Login</a></li></um>
 		</div>
 	</div>
 	<div class="inner-body">

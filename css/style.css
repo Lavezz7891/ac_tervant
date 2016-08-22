@@ -60,12 +60,14 @@ table {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: !important 'sinkin_regular', Helvetica, Arial, sans-serif;
+	font-family:  'open sans', Helvetica, Arial, sans-serif;
 	font-size: 12px;
+		position: relative;
+
 }
 
 p {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	padding-bottom: 10px;
 }
 
@@ -107,9 +109,20 @@ div.header {
 	height: 50px;
 }
 
+div.login {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 50px;
+	background-color: #BEE0FF;
+	vertical-align: 50%;
+}
+
+
 div.menu {
-	width: 500px;
 	margin: 0 auto;
+	width: 800px;
 }
 
 div.header ul {
@@ -120,10 +133,13 @@ div.header ul {
 
 div.header ul li {
 	float: left;
-	padding: 8px 10px;
 	list-style-type: none;
 	margin: 0 0px;
 	height: 50px;
+	width: 200px;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 50px
 }
 
 div.header ul li:first {
@@ -138,7 +154,7 @@ div.header ul li a {
 	font-size: 1.5em;
 }
 
-div.header ul li:hover  {
+div.header ul li:hover {
 	background-color: #A6C3DD;
 	border-radius: 5%;
 }
@@ -171,6 +187,6 @@ div.innerContainer {
 	margin-left: 75px;
 	margin-bottom: 5px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 25px;
 	border-radius: 5px;
 }
