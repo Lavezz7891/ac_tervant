@@ -1,10 +1,8 @@
 <?php 
 include 'include.php';
- 
-
-toon_header() 
-
 ?>
+
+<?php toon_header()  ?>
 
 <body>
 <div class="main">
