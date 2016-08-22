@@ -20,15 +20,17 @@ toon_header()
 		</div>
 	</div>
 	<div class="inner-body">
-		<p>Wedstrijd verslagen</p>
+		<h2 class="center">Wedstrijd verslagen</h2>
 		<div class="innerContainers">
-			<p>Innder containers</p>
 			<div class="innerContainer">
-				<p>Tervant - herkenrode</p>
+				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
 			</div>
 
 			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
+				<p>Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
+				Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
+				Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
+				</p>
 			</div>
 
 			<div class="innerContainer">

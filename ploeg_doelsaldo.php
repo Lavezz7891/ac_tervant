@@ -24,7 +24,7 @@ toon_header()
 		<div class="innerContainers">
 			<p>Innder containers</p>
 			<div class="innerContainer">
-				<p>Tervant - herkenrode</p>
+				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
 			</div>
 
 			<div class="innerContainer">

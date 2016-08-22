@@ -1,9 +1,93 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+h1,h2,h3,h4,h5,h6,p,div,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*PREFIX CLASSES : */
+
+.center {
+	text-align: center;
+}
+
+/*EINDE PREFIX CLASSES  */
+
 body {
-	
-	background-color: #F0f0f0;
+	margin: 0;
+	padding: 0;
+	font-family: !important 'sinkin_regular', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+p {
+	font-size: 1.3em;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h1,h2,h3 {
+	padding-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 div.main {
+	background-color: #F0f0f0;
 	width: 100%;
 	height: 800px;
 }
@@ -13,6 +97,7 @@ div.main h1 {
 	width: auto;
 	margin: 0;
 	padding: 25px 0;
+	font-size: 4em;
 }
 
 div.header {
@@ -49,6 +134,8 @@ div.header ul li:first {
 div.header ul li a {
 	display: block;
 	height: 50px;
+	text-decoration: none;
+	font-size: 1.5em;
 }
 
 div.header ul li:hover  {
@@ -63,23 +150,27 @@ div.header ul li:hover  a {
 }
 
 div.inner-body {
-	border: 2px solid blue;
+	height: auto;
+	padding: 20px;
 }
 
 div.innerContainers {
-	border: 2px solid green;
-	--containerBreede : 250px;
 	overflow: hidden;
-	width: 960px;
+	width: 1200px;
 	margin: 0 auto;
+	padding-top: 10px;
+	border-radius: 5px;
 }
 
 div.innerContainer {
-	border: 2px solid grey;
-	width: var(--containerBreede);
-	height: 60px;
+	background-color: #EAEEF2;
+	-webkit-box-shadow:0px 0px 2px 1px #7696B3;
+    box-shadow:0px 0px 2px 1px #7696B3;
+	width: 300px;
 	float: left;
-	margin-left: 50px;
+	margin-left: 75px;
+	margin-bottom: 5px;
 	text-align: center;
 	line-height: 50px;
+	border-radius: 5px;
 }
