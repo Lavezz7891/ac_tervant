@@ -158,7 +158,7 @@ div.header ul li a {
 }
 
 div.header ul li:hover {
-	background-color: #A6C3DD;
+	background-color: #C0CDDB;
 }
 
 div.header ul li:hover  a {	
@@ -228,3 +228,23 @@ div.inner-login-page h1 {
 
 
 /*Einde LOGIN PAGINA styling*/
+
+
+/*BEGIN SPCIFIEKE STYLING INDEX PAGINA*/
+
+.nieuw_verslag {
+	padding-bottom: 30px;
+}
+
+.nieuw_verslag .nieuw_verslag_button a{
+	background-color: #57EC57;
+	width: 150px;
+	height: 50px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 1.2em;
+	display: block;
+	text-decoration: none;
+}
+
+/* EINDE SPCIFIEKE STYLING INDEX PAGINA*/

@@ -23,6 +23,7 @@ include 'include.php';
 	</div>
 	<div class="inner-body">
 		<h2 class="center">Wedstrijd verslagen</h2>
+		<div class="nieuw_verslag center"><div class="nieuw_verslag_button"><a href="">Nieuwe wedstrijdverslag</a></div></div>
 		<div class="innerContainers">
 			<div class="innerContainer">
 				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
