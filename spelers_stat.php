@@ -1,6 +1,7 @@
 <?php 
+include 'conn.php';
 include 'include.php';
- 
+
 
 toon_header() 
 
@@ -22,17 +23,16 @@ toon_header()
 	<div class="inner-body">
 		<p>Spelers statistieken</p>
 		<div class="innerContainers">
-			<div class="innerContainer">
-				<p>Tervant - herkenrode oiehfoiz oej efijie okjc oeij iijodjoiedjfoiejf oij eii fàij eoij  </p>
-			</div>
+			<table class="table">
+				<?php 
 
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
-			</div>
-
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	ozhef oijf iedjf ekjf eij ijfeijfei jfo zjf eiof oijf </p>
-			</div>
+				 	$query = $conn->query('SELECT * FROM speler_statistieken'); 
+			     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelerStatistieken');
+		      	 	while ($row = $query->fetch()) {
+		      		 echo $row->speler_statistieken, '<br>';
+		         	}
+		    	?>
+			</table>
 		</div>
 	</div>
 </section>

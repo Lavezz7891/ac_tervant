@@ -33,4 +33,72 @@ function toon_footer() {
 <?php
 }
 
+
+// In deze class maken we contrueren we alle blok info zodat het overzichtelijker is
+class gegevensOphalen 
+{
+	public $achternaam, $voornaam, $geboortedatum, $geslacht, $gegevens;
+
+	public function __construct()
+	{
+		$this->spelersInfo = 
+		"<tr class=\"table_row\">
+			<td class=\"table_cell center\">{$this->achternaam} {$this->voornaam}</td> 
+			<td class=\"table_cell center\">{$this->geboortedatum}</td> 
+			<td class=\"table_cell center\">{$this->contact}</td></tr>";
+	}
+};
+
+
+class wedstrijdVerslagen 
+{
+	public $titel, $datum, $wedstrijdverslag;
+
+	public function __construct()
+	{
+		$this->wedstrijdverslag = 
+		"   
+		<div class=\"innerContainer\">
+			<div class=\"wedstrijdverslag\">
+				<header class=\"wedstrijdverslag_header center\">{$this->titel}</header>
+				<div class=\"wedstrijdverslag_datum center\">{$this->datum}</div>
+
+				<article class=\"wedstrijdverslag_artikel center\">{$this->wedstrijdverslag}
+				</article>
+		    </div>
+		</div>
+		";
+	}
+}
+
+
+
+class spelerStatistieken 
+{
+	public $doelpunten, $assist;
+
+	public function __construct()
+	{
+		$this->speler_statistieken = 
+		"<tr class=\"table_row\">
+			<td class=\"table_cell center\">{$this->doelpunten} </td> 
+			<td class=\"table_cell center\">{$this->assist}</td>";
+		;
+	}
+}
+
+
+class ploegDoelpunten 
+{
+	public $doelpunten_tegen, $doelpunten_gemaakt;
+
+	public function __construct()
+	{
+		$this->ploeg_doelpunten = 
+		"<tr class=\"table_row\">
+			<td class=\"table_cell center\">{$this->doelpunten_gemaakt} </td> 
+			<td class=\"table_cell center\">{$this->doelpunten_gemaakt}</td>";
+		;
+	}
+}
  ?>

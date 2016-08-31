@@ -1,4 +1,5 @@
 <?php 
+include 'conn.php';
 include 'include.php';
 ?>
 
@@ -25,20 +26,16 @@ include 'include.php';
 		<h2 class="center">Wedstrijd verslagen</h2>
 		<div class="nieuw_verslag center"><div class="nieuw_verslag_button"><a href="">Nieuwe wedstrijdverslag</a></div></div>
 		<div class="innerContainers">
-			<div class="innerContainer">
-				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
-			</div>
+			
+				<?php 
 
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
-				Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
-				Tervant - herkenrode	lorem ipsum	Tervant - herkenrode	lorem ipsum	
-				</p>
-			</div>
-
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
-			</div>
+				 	$query = $conn->query('SELECT * FROM `wedstrijdverslagen`'); 
+			     	$query->setFetchMode(PDO::FETCH_CLASS, 'wedstrijdVerslagen');
+		      	 	while ($row = $query->fetch()) {
+		      			echo $row->wedstrijdverslag;
+		         	}
+		        ?>
+	
 		</div>
 	</div>
 </section>

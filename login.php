@@ -1,6 +1,7 @@
 
 
 <?php 
+include 'conn.php';
 include 'include.php';
 toon_header() 
 ?>

@@ -1,4 +1,5 @@
 <?php 
+include 'conn.php';
 include 'include.php';
  
 
@@ -22,17 +23,16 @@ toon_header()
 	<div class="inner-body">
 		<p>ploeg doelsaldo</p>
 		<div class="innerContainers">
-			<div class="innerContainer">
-				<p>Tervant - herkenrode lorem ipsume ipsum lorem dorem korem ipsum</p>
-			</div>
+			<table class="table">
+				<?php 
 
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
-			</div>
-
-			<div class="innerContainer">
-				<p>Tervant - herkenrode	</p>
-			</div>
+				 	$query = $conn->query('SELECT * FROM ploeg_doelpunten'); 
+			     	$query->setFetchMode(PDO::FETCH_CLASS, 'ploegDoelpunten');
+		      	 	while ($row = $query->fetch()) {
+		      		 echo $row->ploeg_doelpunten, '<br>';
+		         	}
+		    	?>
+			</table>
 		</div>
 	</div>
 </section>
