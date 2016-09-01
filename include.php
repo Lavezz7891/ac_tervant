@@ -43,16 +43,35 @@ class gegevensOphalen
 	{
 		$this->spelersInfo = 
 		"<tr class=\"table_row\">
-			<td class=\"table_cell center\">{$this->achternaam} {$this->voornaam}</td> 
+			<td class=\"table_cell naam_knop center\"><a id=\"naam_knop\" href=\"spelers_detail.php\">{$this->achternaam} {$this->voornaam}</a></td> 
 			<td class=\"table_cell center\">{$this->geboortedatum}</td> 
 			<td class=\"table_cell center\">{$this->contact}</td></tr>";
 	}
 };
 
 
+class spelersDetail 
+{
+	public $achternaam, $voornaam, $leeftijd, $geboortedatum, $contact, $adres, $geslacht, $evaluatie;
+	public function __construct()
+	{
+		$this->spelers_detail = 
+		"<tr class=\"table_row\">
+			<td class=\"table_naam table_cell center\">{$this->achternaam} {$this->voornaam}</td> 
+			<td class=\"col-md-2 table_cell center\">{$this->geboortedatum}</br>leeftijd: {$this->leeftijd}</td> 
+			<td class=\"table_cell center\">{$this->contact}</td>
+			<td class=\"table_cell center\">{$this->adres}</td>
+			<td class=\"table_cell center\">{$this->geslacht}</td> 
+			<td class=\"table_cell center evaluatie\">{$this->evaluatie}</td>  </tr>";
+	}
+};
+
+
+
 class wedstrijdVerslagen 
 {
 	public $titel, $datum, $wedstrijdverslag;
+	
 
 	public function __construct()
 	{
@@ -71,6 +90,16 @@ class wedstrijdVerslagen
 	}
 }
 
+// Testen hoe ik een READ MORE stukje kan toevoegen  hieronder
+
+class verslag 
+{
+	public $wedstrijd__verslag;
+	public function __construct()
+	{
+		$this->wedstrijdverslag;
+	}
+}
 
 
 class spelerStatistieken 

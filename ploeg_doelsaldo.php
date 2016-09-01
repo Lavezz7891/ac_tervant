@@ -21,9 +21,13 @@ toon_header()
 		</div>
 	</div>
 	<div class="inner-body">
-		<p>ploeg doelsaldo</p>
+		<h2 class="center">Spelers U10A doelpuntensaldo</h2>
 		<div class="innerContainers">
 			<table class="table">
+				<tr class="table_row center">
+					<th class="table_head center">Doelpunten tegen</th>
+					<th class="table_head center">Doelpunten gemaakt</th>
+				</tr>
 				<?php 
 
 				 	$query = $conn->query('SELECT * FROM ploeg_doelpunten'); 

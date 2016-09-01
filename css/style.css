@@ -68,6 +68,10 @@ body {
 
 }
 
+a {
+	color: #000;
+}
+
 p {
 	font-size: 1.1em;
 	padding-bottom: 10px;
@@ -181,8 +185,8 @@ div.innerContainers {
 
 div.innerContainer {
 	background-color: #EAEEF2;
-	-webkit-box-shadow:0px 0px 2px 1px #7696B3;
-    box-shadow:0px 0px 2px 1px #7696B3;
+	-webkit-box-shadow:0px 0px 2px 1px  #C4C1C1;
+    box-shadow:0px 0px 2px 1px  #C4C1C1;
 	width: 300px;
 	float: left;
 	margin-left: 75px;
@@ -252,21 +256,81 @@ div.inner-login-page h1 {
 /*BEGIN SPCIFIEKE STYLING spelers PAGINA*/
 
 .table {
-	border: 3px solid black;
+	border: 3px solid #C4C1C1;
 	width: 605px;
 	margin: 0 auto;
 }
 
+.table .table_head {
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
 .table .table_row {
-	background-color: #eee;
 	border: 1px solid red;
 }
 
 .table .table_row .table_cell {
-	background-color: #90CDEA;
-	width: 150px;
+	background-color: #EAEEF2;
+	/*width: 150px;*/
 	height: 50px;
-	border: 1px solid yellow;
+	border: 1px solid #B0B1B8;
+}
+
+.table .table_row .table_naam {
+	width: 250px;
+}
+
+.table .table_row #naam_knop a {
+	display: block;
+	height: 100%;
+}
+
+.table .table_row .naam_knop:hover {
+	background-color: #C0CDDB;
+}
+
+.table .table_row .naam_knop:hover a {
+	color: #F0f0f0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+tr.table_row:nth-child(even) .table_cell {
+  background-color: #BEE0FF;
 }
 
 /* EINDE SPCIFIEKE STYLING spelers PAGINA*/
+
+/*BEGIN SPCIFIEKE STYLING spelers detail PAGINA*/
+
+.terug_knop {
+	width: 100px;
+	height: 50px;
+	margin: 25px auto;
+	text-align: center;
+	line-height: 50px;
+	font-size: 1.2em;
+	background-color: #BEE0FF;
+	color: #fff;
+}
+
+.terug_knop a {
+	display: block;
+}
+
+.terug_knop:hover {
+	background-color: #C0CDDB;
+}
+
+.terug_knop:hover a {
+	color: #F0f0f0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.evaluatie {
+	height: 50px;
+}
+
+/* EINDE SPCIFIEKE STYLING spelers detail PAGINA*/

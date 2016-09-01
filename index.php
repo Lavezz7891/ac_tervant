@@ -26,6 +26,21 @@ include 'include.php';
 		<h2 class="center">Wedstrijd verslagen</h2>
 		<div class="nieuw_verslag center"><div class="nieuw_verslag_button"><a href="">Nieuwe wedstrijdverslag</a></div></div>
 		<div class="innerContainers">
+				<!-- <?php 
+					// $verslag = new verslag('dokenkcdkcvkv kd vpk vkpdc pkc ');	
+					// echo $verslag->wedstrijd__verslag;
+
+					$query = $conn->query('SELECT * FROM `wedstrijdverslagen`'); 
+			     	$query->setFetchMode(PDO::FETCH_CLASS, 'verslag');
+		      	 	while ($row = $query->fetch()) {
+		      	 		if (isset($row)) {
+		      	 			$verslag = $row->wedstrijdverslag;
+		      	 			$korte_verslag = (strlen($verslag) > 0) ? substr($verslag,0,50).'...' : $verslag;	
+		      	 			echo "$korte_verslag <a href=\"spelers_tervant.php\">Lees meer</a> </br>";
+		      	 		}
+		      			 
+		         	}
+				 ?> -->
 			
 				<?php 
 
@@ -35,7 +50,7 @@ include 'include.php';
 		      			echo $row->wedstrijdverslag;
 		         	}
 		        ?>
-	
+				
 		</div>
 	</div>
 </section>
