@@ -1,6 +1,14 @@
 <?php 
+session_start();
 include 'conn.php';
 include 'include.php';
+
+$logged_in = false;
+if (empty($_SESSION['login_status'])) {
+}elseif ($_SESSION['login_status'] == true) {
+	$user_voornaam =  $_SESSION['user_voornaam'];
+	$logged_in = true;
+}
 ?>
 
 <?php toon_header()  ?>
@@ -19,12 +27,28 @@ include 'include.php';
 		</div>
 
 		<div class="login center">
-				<ul><li><a href="login.php">Login</a></li></ul>
+			<?php 
+				if ($logged_in == true) {
+					echo "Hallo " . $user_voornaam;
+					echo "<ul><li><a href=\"logout.php\">Logout</a></li></ul>";
+				} else {
+					echo "<ul><li><a href=\"login.php\">Login</a></li></ul>";
+				}
+			 ?>
+				
 		</div>
 	</div>
 	<div class="inner-body">
 		<h2 class="center">Wedstrijd verslagen</h2>
-		<div class="nieuw_verslag center"><div class="nieuw_verslag_button"><a href="">Nieuwe wedstrijdverslag</a></div></div>
+		<?php 
+			if (isset($user_voornaam)) {
+				echo "<div class=\"nieuw_verslag center\">
+				       <div class=\"nieuw_verslag_button\"><a href=\"voeg_verslag_toe.php\">Nieuwe wedstrijdverslag</a>
+				       </div>
+			         </div>";
+			}
+		?>
+		
 		<div class="innerContainers">
 				<!-- <?php 
 					// $verslag = new verslag('dokenkcdkcvkv kd vpk vkpdc pkc ');	

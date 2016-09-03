@@ -16,6 +16,9 @@ function toon_header() {
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- script toevoegen van tinymce text editor -->
+ <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+ <script>tinymce.init({ selector:'textarea' });</script>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
