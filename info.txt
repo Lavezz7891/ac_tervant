@@ -1,21 +1,10 @@
-
-
-
-- op mijn website een nieuwe database aanmaken of koppelen aan een bestaanden en de bovenstaande tabellen aanmaken
-<<<<<<< HEAD
-- Nakijken of het binnen mijn kunnen is om een admin ruimte aan te maken zodat ik ter plaatse dingen kan toevoegen... dit is de bedoeling... back end hoef ik achteraf niet meer te zijn...
-=======
-
-- Nakijken of het binnen mijn kunnen is om een admin ruimte aan te maken zodat ik ter plaatse dingen kan toevoegen... dit is de bedoeling... back end hoef ik achteraf niet meer te zijn...
-
-
-
-Knop nieuwe verslagen verder uitwerken -> bij klikken een text editor krijgen en bij toevoegen terug keren naar index pagina en nieuwe verslag automatisch vanboven
+nieuwe verslagen : nieuwste bovenaan 
 
 knoppen verwijderen en wijzigen aanbrengen en werk klaar maken met PHP
+|
+---> verslagen, spelers, statistieken, doelpunten
 
+Tabellen DB in orde brengen, op dit moment kan ik geen speler toevoegen zonder eerst de statistieken toe te voegen
+deze moet andersom gebeuren, de tabel speler id moet de parent zijn en de andere de chil
 
-
-Het tabel spelers en spelers statistieken moeten met elkaar verbonden worden 
-Id van de speler moet overeen komen met ID van statistieken... opzoeken en leren!
 

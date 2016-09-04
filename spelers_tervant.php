@@ -4,7 +4,8 @@ include 'conn.php';
 include 'include.php';
 
 $logged_in = false;
-if ($_SESSION['login_status'] == true) {
+if (empty($_SESSION['login_status'])) {
+}elseif ($_SESSION['login_status'] == true) {
 	$user_voornaam =  $_SESSION['user_voornaam'];
 	$logged_in = true;
 }
@@ -17,11 +18,24 @@ toon_header()
 <section class="main">
 	<h1>A.C. Tervant U10A</h1>
 	<div class="header">
-		<div class="menu">
+		<?php 
+
+			if ($logged_in == false) {
+				echo "<div class=\"menu_logged_in\">";
+			}else {
+				echo "<div class=\"menu\">";
+			}
+
+	 	?>
+		
 			<ul>
 				<li><a href="index.php">Home</a></li>
 				<li><a href="spelers_tervant.php">Spelers</a></li>
-				<li><a href="spelers_stat.php">Spelers statistieken</a></li>
+				<?php 
+					if ($logged_in == true && isset($user_voornaam)) {
+					echo "<li><a href=\"spelers_stat.php\">Spelers statistieken</a></li>";
+					}
+				 ?>	
 				<li><a href="ploeg_doelsaldo.php">Ploeg doelpunten</a></li>
 		    </ul>
 		</div>
