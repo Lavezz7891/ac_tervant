@@ -54,15 +54,17 @@ toon_header();
 		<div class="innerContainers">
 			<table class="table">
 				<tr class="table_row center">
+					<th class="table_head center">Speler</th>
 					<th class="table_head center">Doelpunten</th>
 					<th class="table_head center">Assisten</th>
 				</tr>
+				
 				<?php 
 
-				 	$query = $conn->query('SELECT * FROM speler_statistieken'); 
+				 	$query = $conn->query('SELECT * FROM spelers ORDER BY doelpunten DESC'); 
 			     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelerStatistieken');
 		      	 	while ($row = $query->fetch()) {
-		      		 echo $row->speler_statistieken, '<br>';
+		      		 echo $row->speler_statistieken;
 		         	}
 		    	?>
 			</table>

@@ -61,7 +61,7 @@ toon_header();
 ?>
 
 <section class="main">
-	<h1>A.C. Tervant U10A - wedstrijdverslag toevoegen</h1>
+	<h1>A.C. Tervant U10A</h1>
 	<div class="header">
 		<div class="menu">
 			<ul>
@@ -83,23 +83,37 @@ toon_header();
 				
 		</div>
 	</div>
+
+	<h2 class="center">Voeg verslag toe</h2>
+
+	<form class="form" method="post" action="">
+
+		<div class="center">
+
+			<h4>Wedstrijd</h4><p><input type="text" name="titel" value="" placeholder=""></p>
+			<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
+				echo $foutmeldingen['titel'];
+			} ?></p>
+
+			<h4>Datum	</h4><p><input type="text" name="datum" value="" placeholder=""></p>
+			<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
+				echo $foutmeldingen['datum'];
+			} ?></p>
+
+		</div>
+
+		<h4 class="center">Wedstrijdverslag</h4>	
+		<p class="textarea"><textarea id="textarea" name="wedstrijdverslag" value="" placeholder="Typ je verslag hier.."></textarea></p>
+		<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
+			echo $foutmeldingen['wedstrijdverslag'];
+		} ?></p>
+		<div class="center">
+			<p class="submit"><input type="submit" name="voeg_toe" value="Voeg toe"></p>
+		</div>
+	</form>
 </section>
 
-<form class="form" method="post" action="">
-	<p><input type="text" name="titel" value="" placeholder="Titel"></p>
-	<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
-		echo $foutmeldingen['titel'];
-	} ?></p>
-	<p><input type="text" name="datum" value="" placeholder="Datum"></p>
-	<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
-		echo $foutmeldingen['datum'];
-	} ?></p>
-	<p><textarea name="wedstrijdverslag" value="" placeholder="Typ je verslag hier.."></textarea></p>
-	<p class="wedstrijd_toevoegen"><?php if (isset($foutmeldingen)) {
-		echo $foutmeldingen['wedstrijdverslag'];
-	} ?></p>
-	<p class="submit"><input type="submit" name="voeg_toe" value="Voeg toe"></p>
-</form>
+
 
  <?php 
  toon_footer();

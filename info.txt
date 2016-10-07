@@ -1,10 +1,42 @@
-nieuwe verslagen : nieuwste bovenaan 
-
 knoppen verwijderen en wijzigen aanbrengen en werk klaar maken met PHP
-|
----> verslagen, spelers, statistieken, doelpunten
+
 
 Tabellen DB in orde brengen, op dit moment kan ik geen speler toevoegen zonder eerst de statistieken toe te voegen
-deze moet andersom gebeuren, de tabel speler id moet de parent zijn en de andere de chil
+deze moet andersom gebeuren, de tabel speler id moet de parent zijn en de andere de child
+
+Een beurtrol opstellen voor spelers die met de u11 en u10b hebben meegedaan... Deze mag ook voor de ouders zichtbaar zijn met een aparte inlog code
+
+1	inlog ouders maken
+	ingelogd als ouders kunnen ze de beurtrol zien 
+	en eventueel ook de statistieken? of tijdens het kerstverlof tijdelijk beschikbaar maken?
+
+
+4	klikken op spelers detail op de pagina speler resulteert op een error
+	deze error heeft te maken met de DB
+
+5	volledige informatie toevoegen aan de spelers op de speler pagina
+
+6	meer styling en info geven op de wijzig speler pagina, ziet er zeer 
+	mager uit... ook zeker geen titel vergeten
+
+7	bij het klikken op de wijzig knop op de wijzig speler pagina blijf je 
+	nu op dezelfde pagina, dit moet veranderen dat je terug gaat naar het 
+	speler statistieken pagina
+
+8	een degelijke footer uitwerken, deze moet nog niet af zijn voor deze 	 taak maar de styling of zeker de richting moet in grote lijnen 		duidelijk zijn
+
+9	als je bent ingelogt komt er een vakje bij met hallo naam, hier moet 
+	een witte rand bijkomen om te matchen met de rest van de knoppen
+
+10	op de homepage krijg je de wedstrijdverslagen, deze zijn per datum 
+	geranschikt, maar de nieuwste voegt zich rechts toe... deze moet 
+	uiteraard links komen..
+
+11	de header van de wedstrijdverslagen een duidelijke kleur geven of
+	vorm om te verduidelijke, ziet er saai uit... en niet uitnodigend
+
+12	er is een div in de index page juist onder de opening van section
+	...deze heeft geen class of id...maar is blijkbaar wel in gebruik dus deze moet tegoei onderzocht worden en een degelijke benaming gegeven worden
+
 
 

@@ -15,18 +15,19 @@ if (empty($_SESSION['login_status'])) {
 
 <body>
 <section class="main">
-	<h1>A.C. Tervant U10A</h1>
-	<div class="header">
-	<?php 
+	<div>
+		<h1>A.C. Tervant U10A</h1>
+		<div class="header">
+		<?php 
 
-		if ($logged_in == false) {
-			echo "<div class=\"menu_logged_in\">";
-		}else {
-			echo "<div class=\"menu\">";
-		}
+			if ($logged_in == false) {
+				echo "<div class=\"menu_logged_in\">";
+			}else {
+				echo "<div class=\"menu\">";
+			}
 
-	 ?>
-		<!-- <div class="menu"> -->
+	 	?>
+			<!-- <div class="menu"> -->
 			<ul>
 				<li><a href="index.php">Home</a></li>
 				<li><a href="spelers_tervant.php">Spelers</a></li>
@@ -72,7 +73,7 @@ if (empty($_SESSION['login_status'])) {
 		      	 	while ($row = $query->fetch()) {
 		      	 		if (isset($row)) {
 		      	 			$verslag = $row->wedstrijdverslag;
-		      	 			$korte_verslag = (strlen($verslag) > 0) ? substr($verslag,0,50).'...' : $verslag;	
+		      	 			$korte_verslag = (strlen($verslag) > 0) ? substr($verslag,0,100).'...' : $verslag;	
 		      	 			echo "$korte_verslag <a href=\"spelers_tervant.php\">Lees meer</a> </br>";
 		      	 		}
 		      			 
@@ -80,14 +81,17 @@ if (empty($_SESSION['login_status'])) {
 				 ?> -->
 			
 				<?php 
+		      	 	
 
-				 	$query = $conn->query('SELECT * FROM `wedstrijdverslagen`'); 
+				 	$query = $conn->query('SELECT * FROM `wedstrijdverslagen` ORDER BY datum ASC'); 
 			     	$query->setFetchMode(PDO::FETCH_CLASS, 'wedstrijdVerslagen');
 		      	 	while ($row = $query->fetch()) {
 		      			echo $row->wedstrijdverslag;
+
 		         	}
+
+
 		        ?>
-				
 		</div>
 	</div>
 </section>

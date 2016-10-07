@@ -54,7 +54,7 @@ toon_header()
 	<div class="inner-body">
 		<h2 class="center">Spelers U10A</h2>
 		<div class="innerContainers">
-			<table class="col-md-push-3 col-md-8 table">
+			<table class="table">
 				<tr class="table_row center">
 					<th class="col-md-2 table_head center">Naam</th>
 					<th class="col-md-2 table_head center">Geboortedatum</th>
@@ -65,8 +65,10 @@ toon_header()
 				 	$query = $conn->query('SELECT * FROM spelers'); 
 			     	$query->setFetchMode(PDO::FETCH_CLASS, 'gegevensOphalen');
 		      	 	while ($row = $query->fetch()) {
-		      		 echo $row->spelersInfo, '<br>';
+		      		 echo $row->spelersInfo;
+		         	
 		         	}
+
 		    	?>
 		    </table>
 		</div>

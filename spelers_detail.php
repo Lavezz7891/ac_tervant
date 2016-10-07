@@ -62,12 +62,23 @@ toon_header();
 					<th class="table_head center">Evaluatie</th>
 				</tr>
 				<?php 
+							
+					try {
 
-				 	$query = $conn->query('SELECT * FROM spelers'); 
-			     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelersDetail');
-		      	 	while ($row = $query->fetch()) {
-		      		 echo $row->spelers_detail, '<br>';
-		         	}
+						if (!empty($_GET['ID'])) {
+							$speler_id = $_GET['ID'];
+							$query = $conn->query('SELECT * FROM spelers WHERE ID=$speler_id '); 
+					     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelersDetail');
+				      	 	while ($row = $query->fetch()) {
+				      		 echo $row->spelers_detail;
+				         	}
+						}
+						
+					} catch (Exception $e) {
+						echo $e->getMessage();
+					}
+
+				 	
 		    	?>
 		    </table>
 		    <div class="terug_knop">
