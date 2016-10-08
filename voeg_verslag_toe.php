@@ -86,7 +86,7 @@ toon_header();
 
 	<h2 class="center">Voeg verslag toe</h2>
 
-	<form class="form" method="post" action="">
+	<form id="form" class="form" method="post" action="">
 
 		<div class="center">
 

@@ -16,6 +16,9 @@ function toon_header() {
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+ <script src="js/Freewall.js"></script>
+
 <!-- script toevoegen van tinymce text editor -->
  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
  <link rel="stylesheet" href="css/style.css">
@@ -75,11 +78,13 @@ class spelersDetail
 
 class wedstrijdVerslagen 
 {
-	public $titel, $datum, $wedstrijdverslag;
+	public $titel, $datum, $wedstrijdverslag,$Sorteerdatum;
+
 	
 
 	public function __construct()
 		{
+
 		$this->wedstrijdverslag = 
 			"   
 			<div class=\"innerContainer\">
@@ -89,18 +94,11 @@ class wedstrijdVerslagen
 						<div class=\"wedstrijdverslag_datum center\"><b>{$this->datum}</b></div>
 					</div>
 					<article class=\"wedstrijdverslag_artikel center\">{$this->wedstrijdverslag}
-				</article>
-		    </div>
-		   <!-- <div class=\"wijzig_wis_wrapper\">
-		    	<div class=\"wedstrijdverslag_wijzig\">
-					<a href=\"wedstrijdverslag_wijzig.php\">wijzig</a>
+					</article>
 		    	</div>
-		    	<div class=\"wedstrijdverslag_wis\">
-					<a href=\"wedstrijdverslag_wis.php\">wis</a>
-		    	</div>
-				</div>-->
 			</div> 
 		    ";
+	
 		}	
 }
 

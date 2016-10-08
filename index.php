@@ -64,6 +64,7 @@ if (empty($_SESSION['login_status'])) {
 		?>
 		
 		<div class="innerContainers">
+
 				<!-- <?php 
 					// $verslag = new verslag('dokenkcdkcvkv kd vpk vkpdc pkc ');	
 					// echo $verslag->wedstrijd__verslag;
@@ -83,10 +84,11 @@ if (empty($_SESSION['login_status'])) {
 				<?php 
 		      	 	
 
-				 	$query = $conn->query('SELECT * FROM `wedstrijdverslagen` ORDER BY datum ASC'); 
+				 	$query = $conn->query('SELECT * FROM `wedstrijdverslagen` ORDER BY Sorteerdatum DESC'); 
 			     	$query->setFetchMode(PDO::FETCH_CLASS, 'wedstrijdVerslagen');
 		      	 	while ($row = $query->fetch()) {
 		      			echo $row->wedstrijdverslag;
+
 
 		         	}
 
