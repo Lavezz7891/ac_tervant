@@ -44,7 +44,7 @@ if (empty($_SESSION['login_status'])) {
 			<?php 
 				if ($logged_in == true) {
 					echo "Hallo " . $user_voornaam;
-					echo "<ul><li><a href=\"logout.php\">Logout</a></li></ul>";
+					echo "<ul><li class=\"logout\"><a href=\"logout.php\">Logout</a></li></ul>";
 				} else {
 					echo "<ul><li><a href=\"login.php\">Login</a></li></ul>";
 				}

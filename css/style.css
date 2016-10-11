@@ -112,9 +112,8 @@ p.submit input {
 	border:none;
 }
 
-/*Tiny mce editor styling*/
-#mceu_13 {
-	/*width: 500px;*/
+.submit input:hover {
+	background-color: #3DBC33;
 }
 
 section.main {
@@ -142,13 +141,18 @@ div.login {
 	top: 0;
 	right: 0;
 	width: 200px;
-	/*height: 50px;*/
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
 	background-color: #BEE0FF;
 	vertical-align: 50%;
 }
 
 div.login ul {
 	padding: 0px;
+}
+
+div.login li.logout{
+	border: none;
 }
 
 
@@ -209,20 +213,27 @@ div.inner-body {
 
 div.innerContainers {
 	overflow: hidden;
-	width: 1400px;
+	width: 90%;
 	margin: 0 auto;
 	padding-top: 10px;
 	border-radius: 5px;
+	/*height: auto;*/
 }
 
-div.innerContainer {
+.testing {
+	background-color: red;
+}
+
+
+
+div.wedstrijdVerslagContainer  {
 	background-color: #EAEEF2;
 	-webkit-box-shadow:0px 0px 2px 1px  #C4C1C1;
     box-shadow:0px 0px 2px 1px  #C4C1C1;
-	width: 350px;
-	max-width: 350px;
+	width: 27%;
+	/*max-width: 350px;*/
 	/*max-height: 700px;*/
-	height: auto !important;
+	/*height: auto;*/
 	float: left;
 	margin-left: 75px;
 	text-align: center;
@@ -302,7 +313,10 @@ div.login_fail, p.wedstrijd_toevoegen {
 }
 
 .wedstrijdverslag_header_wrapper {
-	height: 35px;
+	margin: -8px -5px;
+	margin-bottom: 10px;
+	background-color: rgb(190, 224, 255);
+	height: 45px;
 }
 
 .wedstrijdverslag_header {
@@ -328,6 +342,10 @@ div.login_fail, p.wedstrijd_toevoegen {
 	text-decoration: none;
 	font-weight: bold;
 	line-height: 50px;
+}
+
+.nieuw_verslag a:hover, .nieuw_verslag_button a:hover {
+	background-color: #3DBC33;
 }
 
 .wijzig_wis_wrapper {
@@ -410,6 +428,22 @@ tr.table_row:nth-child(even) .table_cell {
 }
 
 /* EINDE SPCIFIEKE STYLING spelers PAGINA*/
+
+/*BEGIN SPCIFIEKE STYLING wijzig gegevens detail PAGINA*/
+
+.gaTerug {
+	background-color: #57EC57;
+	color: #fff;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.gaTerug:hover {
+	color: #FFF;
+	background-color: #3DBC33;
+}
+
+/* EINDE SPCIFIEKE STYLING wijzig gegevens PAGINA*/
 
 /*BEGIN SPCIFIEKE STYLING spelers detail PAGINA*/
 

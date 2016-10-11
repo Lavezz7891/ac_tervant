@@ -17,7 +17,8 @@ function toon_header() {
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
- <script src="js/Freewall.js"></script>
+
+
 
 <!-- script toevoegen van tinymce text editor -->
  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
@@ -87,15 +88,17 @@ class wedstrijdVerslagen
 
 		$this->wedstrijdverslag = 
 			"   
-			<div class=\"innerContainer\">
-				<div class=\"wedstrijdverslag\">
-					<div class=\"wedstrijdverslag_header_wrapper\">
-						<header class=\"wedstrijdverslag_header center\"><b>{$this->titel}</b></header>
-						<div class=\"wedstrijdverslag_datum center\"><b>{$this->datum}</b></div>
-					</div>
-					<article class=\"wedstrijdverslag_artikel center\">{$this->wedstrijdverslag}
-					</article>
-		    	</div>
+			<div class=\"wedstrijdVerslagContainer\">
+				<div class=\"innerContainer\">
+					<div class=\"wedstrijdverslag\">
+						<div class=\"wedstrijdverslag_header_wrapper\">
+							<header class=\"wedstrijdverslag_header center\"><b>{$this->titel}</b></header>
+							<div class=\"wedstrijdverslag_datum center\"><b>{$this->datum}</b></div>
+						</div>
+						<article class=\"wedstrijdverslag_artikel center\">{$this->wedstrijdverslag}
+						</article>
+			    	</div>
+				</div>
 			</div> 
 		    ";
 	

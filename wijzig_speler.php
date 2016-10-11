@@ -47,7 +47,7 @@ toon_header();
 			<?php 
 				if ($logged_in == true) {
 					echo "Hallo " . $user_voornaam;
-					echo "<ul><li><a href=\"logout.php\">Logout</a></li></ul>";
+					echo "<ul><li class=\"logout\"><a href=\"logout.php\">Logout</a></li></ul>";
 				} else {
 					echo "<ul><li><a href=\"login.php\">Login</a></li></ul>";
 				}
@@ -70,40 +70,39 @@ toon_header();
 <?php 	
 
 	
-
+$gegevensAanpassen = false;
 
 // checken of de form knop is geklikt 
 if (isset($_POST['wijzig'])) {	
 
-	  //  Velden zijn geldig en input in variabel plaatsen
-	  
+	  //  Alle info van de velden in een variabel stoppen
 	  $nieuweSpelersDoelpunten = $_POST['spelersDoelpunten'];
 	  $nieuweSpelersAssist = $_POST['spelersAssist']; 
 	  $userIdPost = $_GET['id'];
 
 	  // Checken of de velden niet leeg zijn
-	  if (!empty($nieuweSpelersDoelpunten) && !empty($nieuweSpelersAssist)) {
+	  if (!empty($nieuweSpelersDoelpunten) && !empty($nieuweSpelersAssist) && !empty($userIdPost)) {
+
 
 	  // Proberen een geldige connectie te maken en een geldige sql query uit te voeren om gegevens te wijzigen
-	  	// Het lukt niet om deze query te maken....
 	  try {
-		  	if (!empty($_GET['id'])) {
+		  	if (!empty($userIdPost)) {
+		  		// De query voorbereiden
 				$query = $conn->prepare('UPDATE `tervant_u10`.`spelers` SET `doelpunten` = :nieuweSpelersDoelpunten,
 																			`assist` = :nieuweSpelersAssist
-										 WHERE `spelers`.`ID` = :userIdPost');
+										 WHERE 								`spelers`.`ID` = :userIdPost');
+				// query uitvoeren
 				$query->execute(array(':nieuweSpelersDoelpunten' => $nieuweSpelersDoelpunten,
-									  ':nieuweSpelersAssist' => $nieuweSpelersAssist,
-									  ':userIdPost' => $userIdPost));
-
-				// $result = $query->fetchAll();
+									  ':nieuweSpelersAssist'     => $nieuweSpelersAssist,
+									  ':userIdPost'              => $userIdPost));
 		  	}
+		    $gegevensAanpassen = true;
 	 	} catch (Exception $e) {
+	 	// Foutmeldingen opvangen en laten zien
 	  	echo $e->getMessage(); 	
 	 	} 
 	  } else {
 	  	// Er zijn lege velden gevonden, doorsturen om opnieuw te proberen met ID nummer
-	  	// header("location: wijzig_speler.php?id=$userID");
-	  	echo "string";
 	  		  $userIdPost = $_GET['id'];
 	  		  echo $userIdPost;
 
@@ -111,27 +110,27 @@ if (isset($_POST['wijzig'])) {
 } 
 
 
-$spelerSatistiek['doelpunten'] = "";
-$spelerSatistiek['assist'] = "";
-$spelerSatistiek['id'] = 0;
-
-// Checken of de user id bestaat +
-// De USER ID vn DB die is meegeven via URL oppikken en in variabel plaatsen
-
+// Checken of de user id is meegegeven via de URL
 if ($_GET['id']) {
+	// user id bestaat
 	$userID = $_GET['id'];
+	// Geldige query opstarten
 	$query = $conn->prepare('SELECT * FROM spelers WHERE ID=:id');
+	// Query uitvoeren
 	$query->execute(array(':id' => $userID));
+	// Alles opvangen uit de DB
 	$row = $query->fetch();
+	// Alle resultaten in variabel stoppen
 	$spelersID = $row['ID'];
 	$spelersDoelpunten = $row['doelpunten'];
 	$spelersAssist = $row['assist'];
+	$errorWijzigSpeler = "";
 
-	// echo "$spelersID $spelersDoelpunten $spelersAssist";
 
 } else {
 
-		echo "kill it";
+		$errorWijzigSpeler = "<div class=\"errorWijzigSpeler\"<p>Er is technische probleem, de resultaat kon niet worden meegegeven. </p><br />
+			  				  <p><a href=\"spelers_stat.php\">Probeer opnieuw</a> of ga naar de <a href=\"index.php\">homepage</a></p></div>";
 	
 } 
 
@@ -139,19 +138,31 @@ if ($_GET['id']) {
 
 ?>
 
-<form class="form" method="post" action="">';
+<form class="form" method="post" action="">
 	<h2 class="center">
 		Wijzig gegevens
 	</h2>
 	<div class="center">
+		<?php
+			// Als de error bestaat, laat deze dan zien 
+			if (isset($errorWijzigSpeler)) {
+			echo $errorWijzigSpeler;
+		} ?>
+		<label>doelpunten</label>
+		<p><input type="text" name="spelersDoelpunten" value="<?php echo $spelersDoelpunten; ?>"/> </p>
+		<label>assisten</label>
+		<p><input type="text" name="spelersAssist" value="<?php echo $spelersAssist; ?>"/></p>
+		<p><input type="hidden" name="spelers_id" value="<?php echo $spelersID; ?>" ></p>
+	 	<p class="submit"><input type="submit" id="submit" name="wijzig" value="WIJZIG"/></p>
+	 	<?php 
 
-		<p><input type="text" name="spelersDoelpunten" value="<?php echo $spelersDoelpunten; ?>" </p>';
-		<p><input type="text" name="spelersAssist" value="<?php echo $spelersAssist; ?>"></p>';
-		<p><input type="text" name="spelers_id" value="<?php echo $spelersID; ?>" ></p>
-	 	<p class="submit"><input type="submit" name="wijzig" value="WIJZIG"></p>';
-	
+	 		if ($gegevensAanpassen == true) {
+	 			echo "Gegevens zijn aangepast, <a class=\"gaTerug\" href=\"spelers_stat.php\">ga terug</a>";
+	 		}
+
+	 	 ?>
 	</div>
-</form>';
+</form>
 
 
  <?php 

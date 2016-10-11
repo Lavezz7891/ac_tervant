@@ -69,12 +69,6 @@ toon_header()
     	<form class="form center" method="post" action="">
       	<p><input type="text" name="username" value="" placeholder="Username"></p>
       	<p><input type="password" name="password" value="" placeholder="Password"></p>
-      	<!-- <p class="remember_me">
-        	<label>
-          	<input type="checkbox" name="remember_me" id="remember_me">
-          	Remember me on this computer
-        	</label>
-      	</p> -->
       	<p class="submit"><input type="submit" name="commit" value="Login"></p>
         <div class="login_fail">
           <?php if (!empty($foutmeldingen)) {
