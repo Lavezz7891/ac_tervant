@@ -29,4 +29,4 @@ Een beurtrol opstellen voor spelers die met de u11 en u10b hebben meegedaan... D
 	...deze heeft geen class of id...maar is blijkbaar wel in gebruik dus deze moet tegoei onderzocht worden en een degelijke benaming gegeven worden
 
 
-
+ 
