@@ -32,13 +32,6 @@ toon_header();
 					<th class="table_head center">Adres</th>
 					<th class="table_head center">Geslacht</th>
 					<th class="table_head center">Evaluatie</th>
-					<?php 
-
-					if ($logged_in == true) {
-						echo "<th class=\"table_head center\" colspan=\"2\">Admin</th>";
-					}
-
-					 ?>
 				</tr>
 				<?php 
 							
@@ -56,6 +49,9 @@ toon_header();
 					     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelersDetail');
 				      	 	while ($row = $query->fetch()) {
 				      		 echo $row->spelers_detail;
+				      		 if ($logged_in == true) {
+					      		 echo $row->admin_logged_in;
+				      		 }
 				         	}
 						}
 						

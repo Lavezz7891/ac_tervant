@@ -55,7 +55,7 @@ class gegevensOphalen
 			<td class=\"table_cell center\">{$this->geboortedatum}</td> 
 			<td class=\"table_cell center\">{$this->contact}</td></tr>";
 	}
-};
+}
 
 
 class spelersDetail 
@@ -64,18 +64,21 @@ class spelersDetail
 	public function __construct()
 	{
 		$this->spelers_detail = 
-		"<tr class=/table_row/>
-			<td class=/table_naam table_cell center/>{$this->achternaam} {$this->voornaam}</td> 
-			<td class=/table_cell center/>{$this->geboortedatum}</br>leeftijd: {$this->leeftijd}</td> 
-			<td class=/table_cell center/>{$this->contact}</td>
-			<td class=/table_cell center/>{$this->adres}</td>
-			<td class=/table_cell center/>{$this->geslacht}</td> 
-			<td class=/table_cell center evaluatie/><a href=\"#\">Ga verder</a></td>
-			<td class=/table_cell center colspan=\"2\"/><a href=\"#\">wijzig</a> - <a href=\"verwijder.php?ID={$this->ID}\">verwijder</a></td>
-		</tr>";
-	}
-};
+		"<tr class=\"table_row\">
+			<td class=\"table_naam table_cell center\">{$this->achternaam} {$this->voornaam}</td> 
+			<td class=\"table_cell center\">{$this->geboortedatum}</br>leeftijd: {$this->leeftijd}</td> 
+			<td class=\"table_cell center\">{$this->contact}</td>
+			<td class=\"table_cell center\">{$this->adres}</td>
+			<td class=\"table_cell center\">{$this->geslacht}</td> 
+			<td class=\"table_cell center evaluatie\"><a href=\"#\">Ga verder</a></td>
+			</tr>";
 
+		$this->admin_logged_in = 
+			 "<td class=\"table_cell center\" colspan=\"6\"/><a href=\"speler_gegevens_wijzigen.php?ID={$this->ID}\">wijzig</a> - 
+			 <a href=\"verwijder.php?ID={$this->ID}\">verwijder</a></td>";
+			
+	}
+}
 
 
 class wedstrijdVerslagen 
@@ -129,7 +132,7 @@ class spelerStatistieken
 	{
 		$this->speler_statistieken = 
 		"<tr class=\"table_row\">
-			<td class=\"table_cell center\"><a href=\"wijzig_speler.php?id=$this->ID\">{$this->achternaam} {$this->voornaam}</a> </td> 
+			<td class=\"table_cell center\"><a href=\"wijzig_speler.php?ID=$this->ID\">{$this->achternaam} {$this->voornaam}</a> </td> 
 			<td class=\"table_cell center\">{$this->doelpunten} </td> 
 			<td class=\"table_cell center\">{$this->assist}</td>";
 		;

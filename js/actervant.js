@@ -3,8 +3,7 @@ $( document ).ready(function() {
 // Initiatie van de tiny mce textbox
  tinymce.init({ selector:'textarea'});
 
- $("#submit").on("click", function(){
- 
+ $("#voeg_speler_toe_submit").on("click", function(){
  })
 
  })

@@ -23,7 +23,7 @@ toon_header();
 		
 		<!-- navigatie toevoegen -->
 	<?php include 'nav.php'; ?>
-	
+
 	</div>
 
 	<div class="ingvevulde_doelpunten_speler center">
@@ -46,26 +46,25 @@ $gegevensAanpassen = false;
 if (isset($_POST['wijzig'])) {	
 
 	  //  Alle info van de velden in een variabel stoppen
-	  $nieuweSpelersDoelpunten = $_POST['spelersDoelpunten'];
-	  $nieuweSpelersAssist = $_POST['spelersAssist']; 
-	  $userIdPost = $_GET['id'];
+	  $spelerGegevens['doelpunten'] = $_POST['spelersDoelpunten'];
+	  $spelerGegevens['assist'] = $_POST['spelersAssist']; 
+	  $spelerGegevens['ID'] = $_GET['ID'];
 
 	  // Checken of de velden niet leeg zijn
-	  if (!empty($nieuweSpelersDoelpunten) && !empty($nieuweSpelersAssist) && !empty($userIdPost)) {
+	  if (!empty($spelerGegevens['doelpunten']) && !empty($spelerGegevens['assist']) && !empty($spelerGegevens['ID'])) {
 
 
 	  // Proberen een geldige connectie te maken en een geldige sql query uit te voeren om gegevens te wijzigen
 	  try {
-		  	if (!empty($userIdPost)) {
+		  	if (!empty($spelerGegevens['ID'])) {
 		  		// De query voorbereiden
-				$query = $conn->prepare('UPDATE `tervant_u10`.`spelers` SET `doelpunten` = :nieuweSpelersDoelpunten,
-																			`assist` = :nieuweSpelersAssist,
-										 WHERE 								`spelers`.`ID` = :userIdPost');
+				$query = $conn->prepare('UPDATE `tervant_u10`.`spelers` SET `doelpunten` 	= :doelpunten,
+																			`assist` 		= :assist
+										 WHERE 								`spelers`.`ID` 	= :ID');
 				// query uitvoeren
-				$query->execute(array(':nieuweSpelersDoelpunten' => $nieuweSpelersDoelpunten,
-									  ':nieuweSpelersAssist'     => $nieuweSpelersAssist,
-									  ':userIdPost'              => $userIdPost));
+				$query->execute($spelerGegevens);
 		  	}
+
 		    $gegevensAanpassen = true;
 	 	} catch (Exception $e) {
 	 	// Foutmeldingen opvangen en laten zien
@@ -73,17 +72,17 @@ if (isset($_POST['wijzig'])) {
 	 	} 
 	  } else {
 	  	// Er zijn lege velden gevonden, doorsturen om opnieuw te proberen met ID nummer
-	  		  $userIdPost = $_GET['id'];
-	  		  echo $userIdPost;
+	  		  $spelerGegevens['ID'] = $_GET['ID'];
+	  		  echo $spelerGegevens['ID'];
 
 	  }
 } 
 
 
 // Checken of de user id is meegegeven via de URL
-if ($_GET['id']) {
+if ($_GET['ID']) {
 	// user id bestaat
-	$userID = $_GET['id'];
+	$userID = $_GET['ID'];
 	// Geldige query opstarten
 	$query = $conn->prepare('SELECT * FROM spelers WHERE ID=:id');
 	// Query uitvoeren

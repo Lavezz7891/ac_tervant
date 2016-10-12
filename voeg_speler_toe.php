@@ -66,7 +66,6 @@ if (isset($_POST['voeg_toe'])) {
 
 
     try {
-	  	
 
     $query = 	"INSERT INTO `spelers`
     						 (`voornaam`, 
@@ -104,11 +103,13 @@ if (isset($_POST['voeg_toe'])) {
 						':evaluatie'	=> $nieuwSpeler['evaluatie']);
 
 
-
+    	//  query uitvoeren
     	$query_ready->execute($result);
-    	echo "wegschrijven is gelukt";
+    	// na het succesvol uitvoeren van de query de gebruiken redirecten
+    	header("location: spelers_tervant.php");
     } catch (Exception $e) {
     	echo $e->getMessage();
+    	echo "Er is iets misgelopen bij het toevoegen van de speler";
     }
   }
 }
@@ -186,7 +187,7 @@ toon_header(); ?>
 		</div>
 
 		<div class="center">
-			<p class="submit"><input type="submit" name="voeg_toe" value="Voeg toe"></p>
+			<p class="submit"><input id="voeg_speler_toe_submit" type="submit" name="voeg_toe" value="Voeg toe"></p>
 		</div>
 	</form>
 

@@ -10,6 +10,11 @@ if (empty($_SESSION['login_status'])) {
 	$logged_in = true;
 }
 
+if (logged_in == false) {
+	header('location: index.php');
+}
+
+
 if (isset($_POST['voeg_toe'])) {
 
 	if (empty($_POST['titel'])) {
