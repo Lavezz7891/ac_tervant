@@ -304,10 +304,18 @@ div.login_fail, p.wedstrijd_toevoegen {
 /*Einde LOGIN PAGINA styling*/
 
 
-/*BEGIN SPCIFIEKE STYLING INDEX PAGINA*/
+/*BEGIN SPCIFIEKE STYLING INDEX + knop op de spelers tervant paginaPAGINA*/
 
-.nieuw_verslag {
+.nieuw_verslag, .nieuw_speler {
 	padding-bottom: 30px;
+}
+
+.nieuw_speler {
+	margin-top: 30px;
+}
+
+.speler_speler_wrapper {
+	clear: both;
 }
 
 .wedstrijdverslag {
@@ -334,7 +342,7 @@ div.login_fail, p.wedstrijd_toevoegen {
 	right: 5px;
 }
 
-.nieuw_verslag .nieuw_verslag_button a{
+.nieuw_verslag .nieuw_verslag_button a, .nieuw_speler .nieuw_speler_button a{
 	background-color: #57EC57;
 	width: 200px;
 	height: 50px;
@@ -347,7 +355,7 @@ div.login_fail, p.wedstrijd_toevoegen {
 	line-height: 50px;
 }
 
-.nieuw_verslag a:hover, .nieuw_verslag_button a:hover {
+.nieuw_verslag a:hover, .nieuw_verslag_button a:hover,  .nieuw_speler a:hover, .nieuw_speler_button a:hover{
 	background-color: #3DBC33;
 }
 

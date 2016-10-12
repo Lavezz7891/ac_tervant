@@ -30,7 +30,7 @@ function toon_header() {
 }
 
 function toon_footer() {
-	?>
+	?> 
 
 	<div class="footer">
 		<div class="inner-footer center"><img src="img/Logo-AC-Tervant1.png" alt="logo tervant"></div>
@@ -70,7 +70,8 @@ class spelersDetail
 			<td class=/table_cell center/>{$this->contact}</td>
 			<td class=/table_cell center/>{$this->adres}</td>
 			<td class=/table_cell center/>{$this->geslacht}</td> 
-			<td class=/table_cell center evaluatie/>{$this->evaluatie}</td>  
+			<td class=/table_cell center evaluatie/><a href=\"#\">Ga verder</a></td>
+			<td class=/table_cell center colspan=\"2\"/><a href=\"#\">wijzig</a> - <a href=\"verwijder.php?ID={$this->ID}\">verwijder</a></td>
 		</tr>";
 	}
 };

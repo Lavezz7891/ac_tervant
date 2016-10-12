@@ -13,6 +13,10 @@ Een beurtrol opstellen voor spelers die met de u11 en u10b hebben meegedaan... D
 	ingelogd als ouders kunnen ze de beurtrol zien 
 	en eventueel ook de statistieken? of tijdens het kerstverlof tijdelijk beschikbaar maken?
 
+3	Bij het inloggen van admin moet spelers detail aangepast
+	kunnen worden en verwijderd worden  - verwijderen is toegevoegd
+	nog alleen wijzigen maken
+
 5	volledige informatie toevoegen aan de spelers op de speler pagina
 
 
