@@ -13,14 +13,10 @@ Een beurtrol opstellen voor spelers die met de u11 en u10b hebben meegedaan... D
 	ingelogd als ouders kunnen ze de beurtrol zien 
 	en eventueel ook de statistieken? of tijdens het kerstverlof tijdelijk beschikbaar maken?
 
-
-4	klikken op spelers detail op de pagina speler resulteert op een error
-	deze error heeft te maken met de DB
-
 5	volledige informatie toevoegen aan de spelers op de speler pagina
 
 
-8	een degelijke footer uitwerken, deze moet nog niet af zijn voor deze 	 taak maar de styling of zeker de 			richting moet in grote lijnen 		duidelijk zijn
+8	footer verder uitwerken... bv meer content en fatsoenlijk uitlijnen onder bij korte content paginas
 
 9 	De wedstrijdverslagen kunnen aanpassen als admin is ingelogd
 

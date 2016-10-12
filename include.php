@@ -33,7 +33,7 @@ function toon_footer() {
 	?>
 
 	<div class="footer">
-		<div class="inner-footer"><p>FOOTER</p></div>
+		<div class="inner-footer center"><img src="img/Logo-AC-Tervant1.png" alt="logo tervant"></div>
 	</div>
 	<script src="js/actervant.js" type="text/javascript"></script>
 		</body>
@@ -65,7 +65,7 @@ class spelersDetail
 	{
 		$this->spelers_detail = 
 		"<tr class=/table_row/>
-			<td class=/table_naam table_cell center/>{$this->ID} {$this->achternaam} {$this->voornaam}</td> 
+			<td class=/table_naam table_cell center/>{$this->achternaam} {$this->voornaam}</td> 
 			<td class=/table_cell center/>{$this->geboortedatum}</br>leeftijd: {$this->leeftijd}</td> 
 			<td class=/table_cell center/>{$this->contact}</td>
 			<td class=/table_cell center/>{$this->adres}</td>

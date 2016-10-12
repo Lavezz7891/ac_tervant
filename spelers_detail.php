@@ -67,7 +67,13 @@ toon_header();
 
 						if (!empty($_GET['ID'])) {
 							$speler_id = $_GET['ID'];
-							$query = $conn->query('SELECT * FROM spelers WHERE ID=$speler_id '); 
+							// query voorbereiden 
+							$query = $conn->prepare('SELECT * FROM spelers WHERE spelers.ID = :speler_id'); 
+							// :speler_id koppelen met de variabel
+							$data = array(':speler_id' => $speler_id);
+							// query met de koppeling uitvoeren
+                      		$query->execute($data); 
+                      		// resultaten opvragen en koppelen met een class
 					     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelersDetail');
 				      	 	while ($row = $query->fetch()) {
 				      		 echo $row->spelers_detail;

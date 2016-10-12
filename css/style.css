@@ -64,8 +64,8 @@ body {
 	padding: 0;
 	font-family:  'open sans', Helvetica, Arial, sans-serif;
 	font-size: 12px;
-		position: relative;
-
+	position: relative;
+	background-color: #f0f0f0;
 }
 
 a {
@@ -245,7 +245,10 @@ div.wedstrijdVerslagContainer  {
 }
 
 div.footer {
-	background-color: #5687BF;
+	background-color: #606972;
+	padding: 20px;
+	border-top: 1px solid grey;
+	margin-top: 75px;
 }
 
 /*Einde algemene styling*/

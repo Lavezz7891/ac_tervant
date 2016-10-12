@@ -89,7 +89,7 @@ if (isset($_POST['wijzig'])) {
 		  	if (!empty($userIdPost)) {
 		  		// De query voorbereiden
 				$query = $conn->prepare('UPDATE `tervant_u10`.`spelers` SET `doelpunten` = :nieuweSpelersDoelpunten,
-																			`assist` = :nieuweSpelersAssist
+																			`assist` = :nieuweSpelersAssist,
 										 WHERE 								`spelers`.`ID` = :userIdPost');
 				// query uitvoeren
 				$query->execute(array(':nieuweSpelersDoelpunten' => $nieuweSpelersDoelpunten,
