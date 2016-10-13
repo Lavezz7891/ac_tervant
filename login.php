@@ -6,52 +6,52 @@ $DB_username = "";
 $DB_password = "";
 
 
-if ($_POST) {
+if (isset($_POST['submit'])) {
 
   $username = $_POST['username'];
   $password = $_POST['password'];
   $foutmeldingen = '';
+  $foutmeldingen['login_fail'] = '';
 
   // controleren of de velden zijn ingevuld
 
-  if (empty($_POST['username'])) {
+  if (empty($username)) {
     $foutmeldingen['username'] = "Vergeet je gebruikers naam niet!";
   }
 
-  if (empty($_POST['password'])) {
+  if (empty($password)) {
     $foutmeldingen['password'] = "Vergeet je wachtwoord niet!";
   }
+// 
+// Hier zit een dikke fout, zonder een admin te hebben en met lege velden als ge inlogt krijgt
+// je steeds de pagina alsof je bent ingelogt... volledig pagina rechecken
+// 
+// 
 
 
-
-  //  connectie met databank maken en password + username selecteren
-  $query = $conn->prepare("SELECT * FROM admin WHERE password='$password' AND username='$username'");
   
   // Proberen de query uit te voeren
   try {
-      $query->execute();
-      // $user = $query->fetch();       
+      //  connectie met databank maken en password + username selecteren
+      $query = $conn->prepare("SELECT * FROM admin WHERE password='$password' AND username='$username'");
+      // $query->execute();
+      $query->setFetchMode(PDO::FETCH_ASSOC);
+      while ($row = $query->fetch()) {
+        $DB_username = $row['username'];
+        $DB_password = $row["password"];
+        $_SESSION['user_voornaam']=$row['username'];
+      }
     }
   catch (PDOException $e) {
         echo 'Database Error: ' . $e->getMessage();
       }
 
-
-  if (isset($query)) {
-    //  Alle resultaten ophalen in de DB + session opstarten
-    while ($row = $query->fetch()) {
-      $DB_username = $row['username'];
-      $DB_password = $row["password"];
-      $_SESSION['user_voornaam']=$row['username'];
-    }
-  } else {
-    echo "Query is niet gelukt";
-  }
  // login username en password checken met database
  if ($DB_username == $username && $DB_password == $password) {
       // session instellen
         $_SESSION['login_status'] = true;
-        header('location: index.php');
+        $_SESSION['username'] = $DB_username;
+        // header('location: index.php');
   } else {
     $foutmeldingen['login_fail'] = "controleer gebruikersnaam of wachtwoord";
     
@@ -60,30 +60,37 @@ if ($_POST) {
 ?>
 
 <?php
-toon_header() 
+toon_header();
+echo $DB_password;
+        echo $DB_username;
 ?>
 <section class="login">
 	<div class="login-page">
   	<div class="inner-login-page">
-      <h1 class="center">Login</h1>
+      <h1 class="login_h1">A.C. Tervant u10A Luca D'Amires</h1>
+      <h2 class="center">Welkom, </h2>
+      <h2 class="center">log in of registreer </h2>
     	<form class="form center" method="post" action="">
-      	<p><input type="text" name="username" value="" placeholder="Username"></p>
-      	<p><input type="password" name="password" value="" placeholder="Password"></p>
-      	<p class="submit"><input type="submit" name="commit" value="Login"></p>
+      	<p>username<input class="login_input" type="text" name="username" value="" placeholder=""></p>
+      	<p>wachtwoord<input class="login_input" type="password" name="password" value="" placeholder=""></p>
+      	<p class="submit"><input type="submit" name="submit" value="Login"></p>
         <div class="login_fail">
-          <?php if (!empty($foutmeldingen)) {
+          <?php if (isset($foutmeldingen)) {
                   echo $foutmeldingen['login_fail'];
                 } 
           ?>
         </div>
+        <div class="registreren">
+          <p><a href="registreer.php">Registreer nu</a></p>
+        </div>
     	</form>
   	</div>
-    <div class="extra-info-login-page">
+     <!--<div class="extra-info-login-page">
     		<div class="login-help center">
       	<p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
     	</div>
     	<div class="center">
-     		<!-- <p><a href="index.php">Terug naar homepage</a></p> -->
+     		<p><a href="index.php">Terug naar homepage</a></p> 
         <div class="menu">
           <ul class="menu_login">
             <li><a href="index.php">Home</a></li>
@@ -93,7 +100,7 @@ toon_header()
           </ul>
         </div>
      	</div>	
-  	</div>
+  	</div> -->
 	</div>
 </section>
   <?php toon_footer() ?>

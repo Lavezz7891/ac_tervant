@@ -78,10 +78,7 @@ if (isset($_POST['wijzig'])) {
 	    $foutmeldingen['evaluatie'] = "Vergeet evaluatie niet!";
 	  }
 
-	  if (empty($foutmeldingen)) {
-	  		//  TO DO: foutmelding oplossen $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	  		//  	   deze ligt hier onder  ergens 
-	  	
+	  if ($foutmeldingenBestaan == false) {
 		  	//  Alle info van de velden in een variabel stoppen
 		  $nieuweSpelersGegevens['voornaam'] 		= $_POST['voornaam'];
 		  $nieuweSpelersGegevens['achternaam'] 		= $_POST['achternaam'];
@@ -218,6 +215,11 @@ if ($_GET['ID']) {
 
 		<div class="center">
 			<p class="submit"><input id="voeg_speler_toe_submit" type="submit" name="wijzig" value="Wijzig gegevens"></p>
+		</div>
+		<div class="spelersOverzicht">
+			
+			<div class="terugNaarSpelerOverzicht center"><a href="spelers_tervant.php">Ga terug naar overzicht</a></div>
+
 		</div>
 		<div class="center">
 			

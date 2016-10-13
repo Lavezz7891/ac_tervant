@@ -22,7 +22,9 @@ function toon_header() {
 
 <!-- script toevoegen van tinymce text editor -->
  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+ <link rel="stylesheet" href="css/login_style.css">
  <link rel="stylesheet" href="css/style.css">
+
   
 
 </head>

@@ -4,10 +4,11 @@ include 'conn.php';
 include 'include.php';
 
 $logged_in = false;
-if (empty($_SESSION['login_status'])) {
-}elseif ($_SESSION['login_status'] == true) {
+if ($_SESSION['login_status'] == true) {
 	$user_voornaam =  $_SESSION['user_voornaam'];
 	$logged_in = true;
+}else {
+	echo "string";
 }
 ?>
 
