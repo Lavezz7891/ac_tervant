@@ -4,7 +4,7 @@ include 'conn.php';
 include 'include.php';
 $DB_username = "";
 $DB_password = "";
-
+$_SESSION['login_status'] = false;
 
 if (isset($_POST['submit'])) {
 
@@ -22,11 +22,6 @@ if (isset($_POST['submit'])) {
   if (empty($password)) {
     $foutmeldingen['password'] = "Vergeet je wachtwoord niet!";
   }
-// 
-// Hier zit een dikke fout, zonder een admin te hebben en met lege velden als ge inlogt krijgt
-// je steeds de pagina alsof je bent ingelogt... volledig pagina rechecken
-// 
-// 
 
 
   
@@ -34,12 +29,14 @@ if (isset($_POST['submit'])) {
   try {
       //  connectie met databank maken en password + username selecteren
       $query = $conn->prepare("SELECT * FROM admin WHERE password='$password' AND username='$username'");
-      // $query->execute();
+      $query->execute();
       $query->setFetchMode(PDO::FETCH_ASSOC);
       while ($row = $query->fetch()) {
         $DB_username = $row['username'];
         $DB_password = $row["password"];
+        $is_admin = $row['is_admin'];
         $_SESSION['user_voornaam']=$row['username'];
+        $_SESSION['user_is_admin']=$is_admin;
       }
     }
   catch (PDOException $e) {
@@ -47,11 +44,12 @@ if (isset($_POST['submit'])) {
       }
 
  // login username en password checken met database
- if ($DB_username == $username && $DB_password == $password) {
-      // session instellen
+ if ($DB_username == $username && $DB_password == $password && isset($_SESSION['user_voornaam'])) {
+        // session instellen
         $_SESSION['login_status'] = true;
         $_SESSION['username'] = $DB_username;
-        // header('location: index.php');
+        $_SESSION['user_is_admin']=$is_admin;
+        header('location: index.php');
   } else {
     $foutmeldingen['login_fail'] = "controleer gebruikersnaam of wachtwoord";
     
@@ -62,7 +60,7 @@ if (isset($_POST['submit'])) {
 <?php
 toon_header();
 echo $DB_password;
-        echo $DB_username;
+echo $DB_username;
 ?>
 <section class="login">
 	<div class="login-page">

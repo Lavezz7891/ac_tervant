@@ -12,7 +12,7 @@
 			    <li><a href="index.php">Home</a></li>
 				<li><a href="spelers_tervant.php">Spelers</a></li>
 				<?php 
-					if ($logged_in == true && isset($user_voornaam)) {
+					if ($logged_in == true && isset($user_voornaam) && $_SESSION['user_is_admin'] == "ja") {
 					echo "<li><a href=\"spelers_stat.php\">Spelers statistieken</a></li>";
 					}
 				 ?>	
@@ -30,3 +30,4 @@
 			 ?>
 				
 		</div>
+

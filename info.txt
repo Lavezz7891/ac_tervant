@@ -6,12 +6,14 @@ deze moet andersom gebeuren, de tabel speler id moet de parent zijn en de andere
 
 Een beurtrol opstellen voor spelers die met de u11 en u10b hebben meegedaan... Deze mag ook voor de ouders zichtbaar zijn met een aparte inlog code
 
+1	Ouder kunnen zich inloggen en hebben niet alle admin rechten...het is echter wel zo dat
+	dit nog beter kan uitgewerkt worden. maar de basis is gelegd.
 
-1	Ouders moeten zich kunne registreren
+2	voor de users verschuift de nav naar links en is niet in het midden, deze bug fixen. deze heeft
+	te maken dat als admin is ingelogd er een vierde nav knop bijkomt maar in dit geval niet en dus komt die 4de 
+	nav knop naar links...
 
-2	inlog ouders maken
-	ingelogd als ouders kunnen ze de beurtrol zien 
-	en eventueel ook de statistieken? of tijdens het kerstverlof tijdelijk beschikbaar maken?
+3 	eventueel een leuk forum maken voor ouders? 
 
 
 5	volledige informatie toevoegen aan de spelers op de speler pagina

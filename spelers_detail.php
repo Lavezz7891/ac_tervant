@@ -49,7 +49,7 @@ toon_header();
 					     	$query->setFetchMode(PDO::FETCH_CLASS, 'spelersDetail');
 				      	 	while ($row = $query->fetch()) {
 				      		 echo $row->spelers_detail;
-				      		 if ($logged_in == true) {
+				      		 if ($logged_in == true && $_SESSION['user_is_admin'] == "ja") {
 					      		 echo $row->admin_logged_in;
 				      		 }
 				         	}

@@ -44,7 +44,7 @@ toon_header()
 		    </table>
 		    <div class="nieuwe_speler_wrapper">
 			<?php 
-				if ($logged_in == true) {
+				if ($logged_in == true && $_SESSION['user_is_admin'] == "ja") {
 					echo "<div class=\"nieuw_speler center\">
 					       <div class=\"nieuw_speler_button\"><a href=\"voeg_speler_toe.php\">Voeg speler toe</a>
 					       </div>

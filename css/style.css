@@ -272,6 +272,7 @@ div.inner-login-page {
 	border-radius: 2px;
 	border: medium none;
 	color: #000;
+	clear: both;
 }
 
 .login_h1 {
@@ -311,10 +312,14 @@ div.menu ul.menu_login li:last-child, div.registreer_menu .registreer_menu_login
 	border: none;
 }
 
-div.login_fail, p.wedstrijd_toevoegen {
+div.login_fail, .registreer_fail, p.wedstrijd_toevoegen {
 	font-size: 1.1em;
 	color: #E12121;
 	font-weight: bold;
+}
+
+.registreer_fail {
+	padding-bottom: 20px;
 }
 
 
@@ -518,3 +523,14 @@ tr.table_row:nth-child(even) .table_cell {
 
 
 /* EINDE SPCIFIEKE STYLING voeg verslag toe PAGINA */
+
+
+.radio_btn  {
+	width: 50px;
+	display: inline-block;
+	float: left;
+}
+
+.hidden_admin_input {
+	display: none;
+}

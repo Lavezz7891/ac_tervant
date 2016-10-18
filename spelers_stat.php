@@ -4,12 +4,16 @@ include 'conn.php';
 include 'include.php';
 
 $logged_in = false;
-if (empty($_SESSION['login_status'])) {
-}elseif ($_SESSION['login_status'] == true) {
-	$user_voornaam =  $_SESSION['user_voornaam'];
-	$logged_in = true;
-}
+$admin = false;
+$is_admin = "";
 
+if (isset($_SESSION['user_voornaam']) && $_SESSION['user_is_admin'] == "ja") {
+	$user_voornaam =  $_SESSION['user_voornaam'];
+
+	$logged_in = true;
+} else {
+	header("location: index.php");
+}
 toon_header(); 
 ?>
 

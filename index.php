@@ -4,11 +4,10 @@ include 'conn.php';
 include 'include.php';
 
 $logged_in = false;
-if ($_SESSION['login_status'] == true) {
+
+if (isset($_SESSION['user_voornaam'])) {
 	$user_voornaam =  $_SESSION['user_voornaam'];
 	$logged_in = true;
-}else {
-	echo "string";
 }
 ?>
 
@@ -26,7 +25,7 @@ if ($_SESSION['login_status'] == true) {
 	<div class="inner-body">
 		<h2 class="center">Wedstrijd verslagen</h2>
 		<?php 
-			if ($logged_in == true) {
+			if ($logged_in == true && $_SESSION['user_is_admin'] == "ja") {
 				echo "<div class=\"nieuw_verslag center\">
 				       <div class=\"nieuw_verslag_button\"><a href=\"voeg_verslag_toe.php\">Nieuwe wedstrijdverslag</a>
 				       </div>

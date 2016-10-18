@@ -53,16 +53,16 @@ if (isset($_POST['voeg_toe'])) {
 
   if (empty($foutmeldingen)) {
   	$i = 0;
-  	$nieuwSpeler['voornaam'] = $_POST['voornaam'];
-  	$nieuwSpeler['achternaam'] = $_POST['achternaam'];
-  	$nieuwSpeler['leeftijd'] = $_POST['leeftijd'];
-  	$nieuwSpeler['geboortedatum'] = $_POST['geboortedatum'];
-  	$nieuwSpeler['contact'] = $_POST['contact'];
-  	$nieuwSpeler['adres'] = $_POST['adres'];
-  	$nieuwSpeler['geslacht'] = $_POST['geslacht'];
-  	$nieuwSpeler['doelpunten'] = $_POST['doelpunten'];
-  	$nieuwSpeler['assisten'] = $_POST['assisten'];
-  	$nieuwSpeler['evaluatie'] = $_POST['evaluatie'];
+  	$nieuwSpeler['voornaam'] 		= $_POST['voornaam'];
+  	$nieuwSpeler['achternaam'] 		= $_POST['achternaam'];
+  	$nieuwSpeler['leeftijd'] 		= $_POST['leeftijd'];
+  	$nieuwSpeler['geboortedatum'] 	= $_POST['geboortedatum'];
+  	$nieuwSpeler['contact'] 		= $_POST['contact'];
+  	$nieuwSpeler['adres'] 			= $_POST['adres'];
+  	$nieuwSpeler['geslacht'] 		= $_POST['geslacht'];
+  	$nieuwSpeler['doelpunten'] 		= $_POST['doelpunten'];
+  	$nieuwSpeler['assisten'] 		= $_POST['assisten'];
+  	$nieuwSpeler['evaluatie'] 		= $_POST['evaluatie'];
 
 
     try {
